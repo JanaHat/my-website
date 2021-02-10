@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link class="logo-title" rel="icon" href="/dist/css/assets/logo.png" type="image/x-icon">
+    <title>Jana Hatasova</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#home"><div class="logo"></div></a>
+        <ul>
+            <li><span>&lt;</span><a href="#home">home</a><span>&gt;</span></li>
+            <li><span>&lt;</span><a href="#about">about</a><span>&gt;</span></li>
+            <li><span>&lt;</span><a href="#projects">projects</a><span>&gt;</span></li>
+            <li><span>&lt;</span><a href="#contact">contact</a><span>&gt;</span></li>
+        </ul>
+    </nav>
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="box0" id="box0">
+            <p>Hi, my name is</p>
+            <h1>Jana Hatasova.</h1>
+            <h2>I am a Junior Web<span class="typing"></span><span class="cursor"></span></h2>
+            <!-- <h3>Welcome to my website.</h3> -->
+            <button class="contactMe" id="contactMe"><a href="#projects">My projects</a></button>
+        </div>
+        <div class="my-picture">
+            <div class="overlay"></div>
+        </div>  
+    </section>
+    <!-- About section -->
+    <section class="about" id="about">
+        <h1><span>&lt</span>about<span>&gt</span></h1>
+        <div class="box1">
+            <div class="wrapper">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <svg>
+                    <defs>
+                        <filter id="filter">
+                            <feGaussianBlur in="SourceGraphic"stdDeviation="18" result="blur"/>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -10" result="filter" />
+                            <feComposite in="SourceGraphic" in2="filter" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="aboutme">
+                <h2>Hi, I am a Junior Web Developer located in Manchester.</h2>
+                <p> </p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button class="resume" id="resume"><a href="#" target="_blank" rel="noopener noreferrer">Resume</a></button> 
+            </div>
+            <div class="skills">      
+        </div>
+        
+    </div>    
+        
+        
+    </section>
+    <section class="projects" id="projects">
+        <h1><span>&lt</span>projects<span>&gt</span></h1>
+        <p>This is showcase of my projects I've been working on.</p>
+        <div class="box2">
+            <div class="card1" id="card1"></div>
+            <div class="card2" id="card2"></div>
+        </div>
+        <div class="box2">
+            <div class="card2" id="card3"></div>
+            <div class="card1" id="card4"></div>
+        </div>
+        <div class="box2">
+            <div class="card1" id="card5"></div>
+            <div class="card2" id="card6"></div>
+
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1><span>&lt</span>contact<span>&gt</span></h1>
+        <form action=""></form>
+        <button class="contactMe"><a href="mailto:hatasova.j@gmail.com">Get In Touch</a></button>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="social">
+
+        </div>
+    </footer>
+    
+
+    <script src="main.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"> -->
+</body>
+</html>
