@@ -5,16 +5,11 @@
   margin: 0;
 }
 
-head link.logo-title {
-  height: 10px;
-  width: 10px;
-}
-
 body {
   background-color: #1a1b1b;
   font-family: "Questrial", sans-serif;
   color: #feffff;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
 }
 
 nav {
@@ -139,10 +134,12 @@ section.home .my-picture .overlay {
 
 section.about {
   align-items: center;
+  margin-top: 100px;
+  justify-content: space-between;
 }
 
 section.about h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
   margin-bottom: 100px;
 }
@@ -157,6 +154,9 @@ section.about p {
 
 section.about .box1 {
   display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
 }
 
 section.about .wrapper {
@@ -222,40 +222,144 @@ section.about .wrapper .ball:nth-child(4):before {
 section.about .aboutme {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 500px;
+  height: 580px;
+  width: 550px;
   z-index: 50;
   margin-left: 50px;
 }
 
 section.about .aboutme h1 {
   text-align: center;
+  margin-bottom: 50px;
 }
 
-section.about .aboutme .resume {
+section.about .aboutme h2 {
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+section.about .aboutme p {
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+
+section.about .skills {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  border-top: 1px solid #858585;
+  border-bottom: 1px solid #858585;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+section.about .skills h3 {
+  font-size: 1.2rem;
+  margin: 15px;
+  text-align: center;
+}
+
+section.about .skills ul {
+  text-align: center;
+}
+
+section.about .skills ul li {
+  display: inline;
+  margin-right: 0.6rem;
+  color: #f9de04;
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+section.about .skills ul li span {
+  margin-left: 0.6rem;
+  color: white;
 }
 
 section.projects {
-  justify-content: center;
   align-items: center;
+  padding-top: 60px;
+  margin-bottom: 0;
 }
 
 section.projects h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 section.projects h1 span {
   color: #f9de04;
 }
 
+section.projects h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
 section.projects .box2 {
   width: 70%;
-  height: 200px;
-  margin-bottom: 30px;
+  height: 230px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+section.projects .card1 {
+  border: 2px solid #f9de04;
+  border-radius: 3px;
+  transform: scale(0.9);
+}
+
+section.projects .card1:hover {
+  transform: scale(1.1) translateX(-3px);
+  transition: 0.5s;
+}
+
+section.projects .card2 {
+  width: 50%;
+  height: 100%;
+  transform: scale(0.9);
+  border-radius: 3px;
+}
+
+section.projects .card2 p {
+  color: #feffff;
+  padding: 0px 20px 0 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+section.projects .card2 h3 {
+  padding: 20px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+section.projects #card1 {
+  height: 100%;
+  width: 50%;
+  background-image: url(/dist/css/assets/yoga.png);
+  background-position: center;
+  background-size: cover;
+}
+
+section.projects #card1:hover {
+  opacity: 0.6;
+}
+
+section.projects #card4 {
+  height: 100%;
+  width: 50%;
+}
+
+section.projects #card5 {
+  height: 100%;
+  width: 50%;
 }
 
 section.contact {
@@ -264,12 +368,36 @@ section.contact {
 }
 
 section.contact h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
+  margin-bottom: 50px;
 }
 
 section.contact h1 span {
   color: #f9de04;
+}
+
+section.contact h2 {
+  font-size: 1.7rem;
+}
+
+section.contact p {
+  width: 550px;
+  height: fit-content;
+  text-align: center;
+  line-height: 28px;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+section.contact .social {
+  width: 140px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0.8;
+  margin: 50px 0;
 }
 
 @keyframes blink {
@@ -324,17 +452,10 @@ section.contact h1 span {
 
 button {
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #f9de04;
-  border-radius: 3px;
   padding: 20px;
   opacity: 0.9;
   font-size: 1.1rem;
-  z-index: 50;
-}
-
-button a {
-  text-decoration: none;
+  letter-spacing: 2px;
   color: #f9de04;
 }
 
@@ -344,5 +465,97 @@ button:hover {
 }
 
 .contactMe {
+  margin: 50px 0;
+  background-color: transparent;
+  border: 1px solid #f9de04;
+  border-radius: 3px;
+}
+
+.resume {
+  width: fit-content;
   margin-top: 50px;
+  background-color: transparent;
+  border: 1px solid #f9de04;
+  border-radius: 3px;
+  justify-self: center;
+}
+
+.github {
+  width: 50px;
+  height: 50px;
+  background-image: url(/dist/css/assets/ghyellsvg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: scale(0.9);
+  border: none;
+  background-color: #1a1b1b;
+}
+
+.github:hover {
+  background-color: #1a1b1b;
+  transform: scale(1) translateY(-4px);
+  transition: 0.3s;
+}
+
+.linkedin {
+  width: 50px;
+  height: 50px;
+  background-image: url(/dist/css/assets/linkin.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: scale(0.9);
+  border: none;
+  background-color: #1a1b1b;
+}
+
+.linkedin:hover {
+  background-color: #1a1b1b;
+  transform: scale(1) translateY(-4px);
+  transition: 0.3s;
+}
+
+.live {
+  width: 20px;
+  height: 20px;
+  background-image: url(/dist/css/assets/linkye.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: scale(0.9);
+  border: none;
+  background-color: #1a1b1b;
+  margin: 25px 5px 10px 20px;
+}
+
+.live:hover {
+  background-color: #1a1b1b;
+  transform: scale(1) translateY(-4px);
+  transition: 0.3s;
+}
+
+.ghub {
+  width: 20px;
+  height: 20px;
+  background-image: url(/dist/css/assets/gh1pt.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: scale(0.9);
+  border: none;
+  background-color: #1a1b1b;
+  margin: 25px 0 10px 5px;
+}
+
+.ghub:hover {
+  background-color: #1a1b1b;
+  transform: scale(1) translateY(-4px);
+  transition: 0.3s;
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid #f9de04;
 }
