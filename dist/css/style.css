@@ -81,6 +81,7 @@ section.home {
 
 section.home .box0 {
   width: 700px;
+  height: 500px;
   margin-right: 50px;
 }
 
@@ -120,7 +121,7 @@ section.home .my-picture {
   background-image: url(/dist/css/assets/IMG_20191002_171604_4.jpg);
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 100%;
   border: 2px solid #f9de04;
 }
 
@@ -128,14 +129,15 @@ section.home .my-picture .overlay {
   width: 300px;
   height: 300px;
   background-color: #f9de04;
-  border-radius: 5px;
+  border-radius: 100%;
   opacity: 0.4;
 }
 
 section.about {
+  display: flex;
   align-items: center;
   margin-top: 100px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 section.about h1 {
@@ -157,13 +159,16 @@ section.about .box1 {
   margin-top: 80px;
   justify-content: center;
   align-items: center;
+  width: 70%;
+  height: 580px;
+  margin-bottom: 50px;
 }
 
 section.about .wrapper {
   width: 280px;
   height: 280px;
   filter: url("#filter");
-  margin-right: 50px;
+  margin-right: 100px;
 }
 
 section.about .wrapper .ball {
@@ -226,8 +231,7 @@ section.about .aboutme {
   align-items: center;
   height: 580px;
   width: 550px;
-  z-index: 50;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 section.about .aboutme h1 {
@@ -281,7 +285,7 @@ section.about .skills ul li span {
 
 section.projects {
   align-items: center;
-  padding-top: 60px;
+  padding-top: 70px;
   margin-bottom: 0;
 }
 
@@ -473,6 +477,7 @@ button:hover {
 
 .resume {
   width: fit-content;
+  align-self: center;
   margin-top: 50px;
   background-color: transparent;
   border: 1px solid #f9de04;
@@ -558,4 +563,121 @@ footer {
   height: 80px;
   width: 100%;
   border-top: 1px solid #f9de04;
+}
+
+@media (max-width: 639px) {
+  section.home {
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    margin-top: 80px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100vh;
+  }
+  section.home .box0 {
+    width: 80%;
+    height: fit-content;
+    margin-bottom: 20px;
+    justify-content: left;
+  }
+  section.home .my-picture {
+    padding-right: 0;
+  }
+  section.home h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  section.home h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  section.projects {
+    width: 100%;
+    height: 180vh;
+    margin-top: 0px;
+  }
+  section.projects .box2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200%;
+  }
+  section.projects .card2 {
+    width: 90%;
+  }
+  section.projects .card1 {
+    width: 100%;
+  }
+  section.projects #card1,
+  section.projects #card4,
+  section.projects #card5 {
+    width: 90%;
+    transform: none;
+  }
+  section.projects #card2,
+  section.projects #card3,
+  section.projects #card6 {
+    transform: none;
+  }
+  section.projects #reverse {
+    flex-direction: column-reverse;
+  }
+  section.projects .ghub,
+  section.projects .live {
+    margin-top: 10px;
+  }
+  section.projects h2 {
+    font-size: 1.2rem;
+  }
+  section.contact {
+    height: 100vh;
+    margin-top: 0px;
+  }
+  section.contact h2 {
+    font-size: 1.4rem;
+  }
+  section.contact p {
+    width: 70%;
+  }
+  section.contact h1 {
+    margin-bottom: 20px;
+  }
+  section.about {
+    height: 120vh;
+    margin-top: 0px;
+  }
+  section.about .box1 {
+    width: 90%;
+    height: 80%;
+    height: fit-content;
+    flex-direction: column-reverse;
+    margin-top: 0px;
+  }
+  section.about .aboutme {
+    width: 100%;
+    height: fit-content;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  section.about .aboutme h1 {
+    margin-bottom: 20px;
+  }
+  section.about .aboutme h2 {
+    text-align: center;
+  }
+  section.about .aboutme .resume {
+    margin-top: 20px;
+  }
+  section.about .wrapper {
+    height: 20%;
+    margin-right: 0;
+    transform: scale(0.7);
+  }
+  section.about h1 {
+    margin-bottom: 0px;
+  }
+  section.about .skills {
+    height: 20%;
+  }
 }
