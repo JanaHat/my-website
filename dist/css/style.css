@@ -30,7 +30,7 @@ nav {
 nav .logo {
   height: 55px;
   width: 49px;
-  background-image: url(/dist/css/assets/logo.png);
+  background-image: url(css/assets/logo.png);
   background-size: cover;
   background-position: center;
 }
@@ -118,7 +118,7 @@ section.home h2 .cursor {
 section.home .my-picture {
   width: 300px;
   height: 300px;
-  background-image: url(/dist/css/assets/IMG_20191002_171604_4.jpg);
+  background-image: url(css/assets/IMG_20191002_171604_4.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 100%;
@@ -347,7 +347,7 @@ section.projects .card2 h3 {
 section.projects #card1 {
   height: 100%;
   width: 50%;
-  background-image: url(/dist/css/assets/yoga.png);
+  background-image: url(css/assets/yoga.png);
   background-position: center;
   background-size: cover;
 }
@@ -488,7 +488,7 @@ button:hover {
 .github {
   width: 50px;
   height: 50px;
-  background-image: url(/dist/css/assets/ghyellsvg.svg);
+  background-image: url(css/assets/ghyellsvg.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -506,7 +506,7 @@ button:hover {
 .linkedin {
   width: 50px;
   height: 50px;
-  background-image: url(/dist/css/assets/linkin.svg);
+  background-image: url(css/assets/linkin.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -524,7 +524,7 @@ button:hover {
 .live {
   width: 20px;
   height: 20px;
-  background-image: url(/dist/css/assets/linkye.svg);
+  background-image: url(css/assets/linkye.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -543,7 +543,7 @@ button:hover {
 .ghub {
   width: 20px;
   height: 20px;
-  background-image: url(/dist/css/assets/gh1pt.svg);
+  background-image: url(css/assets/gh1pt.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
