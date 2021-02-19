@@ -642,16 +642,23 @@ footer {
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 60px;
     padding-left: 0;
     padding-right: 0;
-    height: 120vh;
+    height: 100vh;
   }
   section.home .box0 {
     width: 80%;
     height: fit-content;
     margin-top: 50px;
     justify-content: left;
+  }
+  section.home .box0 h2 {
+    height: 60px;
+    width: 50%;
+  }
+  section.home .box0 h2 .cursor {
+    height: 1.5rem;
   }
   section.home .my-picture {
     padding-right: 0;
