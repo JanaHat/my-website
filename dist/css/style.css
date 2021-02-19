@@ -69,10 +69,10 @@ nav .burger {
 }
 
 nav .burger div {
-  width: 25px;
+  width: 36px;
   height: 3px;
   background-color: #f9de04;
-  margin: 5px;
+  margin: 7px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -632,6 +632,9 @@ footer {
     font-size: 2rem;
     margin-left: 0;
   }
+  nav ul li:nth-child(1) {
+    margin-top: 100px;
+  }
   nav .burger {
     display: block;
   }
@@ -642,7 +645,7 @@ footer {
     margin-top: 80px;
     padding-left: 0;
     padding-right: 0;
-    height: 100vh;
+    height: 120vh;
   }
   section.home .box0 {
     width: 80%;
@@ -721,7 +724,7 @@ footer {
     margin-bottom: 20px;
   }
   section.about {
-    height: 150vh;
+    height: 170vh;
     margin-top: 0px;
   }
   section.about .box1 {
