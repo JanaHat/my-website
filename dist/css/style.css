@@ -30,7 +30,7 @@ nav {
 nav .logo {
   height: 55px;
   width: 49px;
-  background-image: url(/dist/css/assets/logo.png);
+  background-image: url(../css/assets/logo.png);
   background-size: cover;
   background-position: center;
 }
@@ -360,7 +360,7 @@ section.projects .card2 h3 {
 section.projects #card1 {
   height: 100%;
   width: 50%;
-  background-image: url(/dist/css/assets/yoga.png);
+  background-image: url(../css/assets/yoga.png);
   background-position: center;
   background-size: cover;
 }
@@ -529,7 +529,7 @@ button:hover {
 .github {
   width: 50px;
   height: 50px;
-  background-image: url(/dist/css/assets/ghyellsvg.svg);
+  background-image: url(../css/assets/ghyellsvg.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -547,7 +547,7 @@ button:hover {
 .linkedin {
   width: 50px;
   height: 50px;
-  background-image: url(/dist/css/assets/linkin.svg);
+  background-image: url(../css/assets/linkin.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -565,7 +565,7 @@ button:hover {
 .live {
   width: 20px;
   height: 20px;
-  background-image: url(/dist/css/assets/linkye.svg);
+  background-image: url(../css/assets/linkye.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -584,7 +584,7 @@ button:hover {
 .ghub {
   width: 20px;
   height: 20px;
-  background-image: url(/dist/css/assets/gh1pt.svg);
+  background-image: url(../css/assets/gh1pt.svg);
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -607,6 +607,13 @@ footer {
 }
 
 @media (max-width: 639px) {
+  section {
+    height: fit-content;
+  }
+  nav {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   nav ul {
     position: absolute;
     left: 0;
@@ -619,7 +626,6 @@ footer {
     align-items: center;
     width: 100%;
     transform: translateX(100%);
-    opacity: 0.9;
   }
   nav ul li {
     margin-bottom: 40px;
@@ -641,23 +647,27 @@ footer {
   section.home .box0 {
     width: 80%;
     height: fit-content;
-    margin-bottom: 20px;
+    margin-top: 50px;
     justify-content: left;
   }
   section.home .my-picture {
     padding-right: 0;
   }
   section.home h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
   section.home h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+  section.home .contactMe {
+    margin-top: 20px;
+  }
   section.projects {
     width: 100%;
-    height: 180vh;
+    height: 200vh;
     margin-top: 0px;
   }
   section.projects .box2 {
@@ -706,8 +716,12 @@ footer {
   section.contact h1 {
     margin-bottom: 20px;
   }
+  section.contact .contactMe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   section.about {
-    height: 120vh;
+    height: 150vh;
     margin-top: 0px;
   }
   section.about .box1 {
