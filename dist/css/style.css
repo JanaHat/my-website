@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -77,11 +78,28 @@ nav .burger div {
   transition: all 0.3s ease;
 }
 
+nav .toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+nav .toggle .line2 {
+  opacity: 0;
+}
+
+nav .toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+nav .nav-active {
+  transform: translateX(0%);
+}
+
 section {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  padding-top: 80px;
 }
 
 section.home {
@@ -149,7 +167,6 @@ section.home .my-picture .overlay {
 section.about {
   display: flex;
   align-items: center;
-  margin-top: 100px;
   justify-content: center;
 }
 
@@ -169,7 +186,6 @@ section.about p {
 
 section.about .box1 {
   display: flex;
-  margin-top: 80px;
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -298,8 +314,6 @@ section.about .skills ul li span {
 
 section.projects {
   align-items: center;
-  padding-top: 70px;
-  margin-bottom: 0;
 }
 
 section.projects h1 {
@@ -314,7 +328,7 @@ section.projects h1 span {
 
 section.projects h2 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   opacity: 0.6;
 }
 
@@ -346,7 +360,7 @@ section.projects .card2 {
 
 section.projects .card2 p {
   color: #feffff;
-  padding: 0px 20px 0 20px;
+  padding: 0px 20px;
   font-size: 18px;
   font-weight: 300;
 }
@@ -354,7 +368,8 @@ section.projects .card2 p {
 section.projects .card2 h3 {
   padding: 20px;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  opacity: 0.6;
 }
 
 section.projects #card1 {
@@ -417,32 +432,16 @@ section.contact .social {
   margin: 50px 0;
 }
 
-.nav-active {
-  transform: translateX(0%);
-}
-
-/* animation */
+/* Burger menu animation */
 @keyframes navLinkFade {
   from {
-    opacity: 0;
+    opacity: 0.3;
     transform: translateY(-20px);
   }
   to {
     opacity: 1;
     transform: translateX(0px);
   }
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @keyframes blink {
@@ -606,9 +605,9 @@ footer {
   border-top: 1px solid #f9de04;
 }
 
-@media (max-width: 639px) {
-  section {
-    height: fit-content;
+@media (max-width: 850px) {
+  .logo {
+    z-index: 1000;
   }
   nav {
     padding-left: 30px;
@@ -624,12 +623,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
     width: 100%;
     transform: translateX(100%);
   }
   nav ul li {
     margin-bottom: 40px;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-left: 0;
   }
   nav ul li:nth-child(1) {
@@ -638,101 +638,43 @@ footer {
   nav .burger {
     display: block;
   }
+  section {
+    height: fit-content;
+    width: 100%;
+  }
   section.home {
+    height: 100vh;
     flex-direction: column;
-    justify-content: left;
-    text-align: left;
-    margin-top: 60px;
     padding-left: 0;
     padding-right: 0;
-    height: 100vh;
   }
   section.home .box0 {
     width: 80%;
     height: fit-content;
-    margin-top: 50px;
-    justify-content: left;
+    margin-right: 0;
   }
-  section.home .box0 h2 {
-    height: 60px;
-    width: 50%;
-  }
-  section.home .box0 h2 .cursor {
-    height: 1.5rem;
-  }
-  section.home .my-picture {
-    padding-right: 0;
-  }
-  section.home h1 {
-    font-size: 3.5rem;
+  section.home .box0 h1 {
+    font-size: 3.8rem;
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  section.home h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  section.home .box0 h2 {
+    height: 60px;
+    width: 70%;
+    margin-top: 10px;
+    font-size: 1.7rem;
+  }
+  section.home .box0 h2 .cursor {
+    height: 1.7rem;
+  }
+  section.home .box0 p {
+    padding-bottom: 10px;
   }
   section.home .contactMe {
     margin-top: 20px;
   }
-  section.projects {
-    width: 100%;
-    height: 200vh;
-    margin-top: 0px;
-  }
-  section.projects .box2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 200%;
-  }
-  section.projects .card2 {
-    width: 90%;
-  }
-  section.projects .card1 {
-    width: 100%;
-  }
-  section.projects #card1,
-  section.projects #card4,
-  section.projects #card5 {
-    width: 90%;
-    transform: none;
-  }
-  section.projects #card2,
-  section.projects #card3,
-  section.projects #card6 {
-    transform: none;
-  }
-  section.projects #reverse {
-    flex-direction: column-reverse;
-  }
-  section.projects .ghub,
-  section.projects .live {
-    margin-top: 10px;
-  }
-  section.projects h2 {
-    font-size: 1.2rem;
-  }
-  section.contact {
-    height: 100vh;
-    margin-top: 0px;
-  }
-  section.contact h2 {
-    font-size: 1.4rem;
-  }
-  section.contact p {
-    width: 70%;
-  }
-  section.contact h1 {
-    margin-bottom: 20px;
-  }
-  section.contact .contactMe {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
   section.about {
-    height: 170vh;
-    margin-top: 0px;
+    height: 1fr;
   }
   section.about .box1 {
     width: 90%;
@@ -753,18 +695,81 @@ footer {
   section.about .aboutme h2 {
     text-align: center;
   }
+  section.about .aboutme p {
+    text-align: center;
+  }
   section.about .aboutme .resume {
     margin-top: 20px;
   }
   section.about .wrapper {
-    height: 20%;
     margin-right: 0;
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   section.about h1 {
     margin-bottom: 0px;
   }
   section.about .skills {
     height: 20%;
+  }
+  section.projects h2 {
+    font-size: 2rem;
+  }
+  section.projects .box2 {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 380px;
+    margin-bottom: 30px;
+  }
+  section.projects .card2 {
+    width: 100%;
+    height: 50%;
+  }
+  section.projects .card2 h3 {
+    padding: 8px 20px;
+  }
+  section.projects .card1 {
+    width: 100%;
+    height: 50%;
+  }
+  section.projects #card1,
+  section.projects #card4,
+  section.projects #card5 {
+    width: 100%;
+    transform: none;
+  }
+  section.projects #card2,
+  section.projects #card3,
+  section.projects #card6 {
+    transform: none;
+  }
+  section.projects #reverse {
+    flex-direction: column-reverse;
+  }
+  section.projects .ghub,
+  section.projects .live {
+    margin-top: 10px;
+  }
+  section.projects h2 {
+    font-size: 1.2rem;
+  }
+  section.contact {
+    height: 100vh;
+  }
+  section.contact h2 {
+    font-size: 1.4rem;
+  }
+  section.contact p {
+    width: 80%;
+  }
+  section.contact h1 {
+    margin-bottom: 20px;
+  }
+  section.contact .contactMe {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  section.contact .social {
+    margin: 30px 0;
   }
 }
