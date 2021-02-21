@@ -643,7 +643,6 @@ footer {
     width: 100%;
   }
   section.home {
-    height: 100vh;
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
@@ -673,9 +672,6 @@ footer {
   }
   section.home .contactMe {
     margin-top: 20px;
-  }
-  section.about {
-    height: 1fr;
   }
   section.about .box1 {
     width: 90%;
@@ -714,6 +710,7 @@ footer {
   }
   section.projects h2 {
     font-size: 2rem;
+    text-align: center;
   }
   section.projects .box2 {
     display: flex;
@@ -755,11 +752,11 @@ footer {
     font-size: 1.2rem;
   }
   section.contact {
-    height: 100vh;
     padding-top: 0;
   }
   section.contact h2 {
     font-size: 1.4rem;
+    text-align: center;
   }
   section.contact p {
     width: 80%;
