@@ -99,7 +99,7 @@ section {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  padding-top: 70px;
+  padding-top: 80px;
 }
 
 section.home {
@@ -165,6 +165,7 @@ section.home .my-picture .overlay {
 }
 
 section.about {
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,11 +186,11 @@ section.about p {
 }
 
 section.about .box1 {
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 580px;
   margin-bottom: 50px;
 }
 
@@ -258,7 +259,7 @@ section.about .aboutme {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 580px;
+  height: fit-content;
   width: 550px;
   margin-left: 100px;
 }
@@ -273,9 +274,14 @@ section.about .aboutme h2 {
   margin-bottom: 20px;
 }
 
-section.about .aboutme p {
+section.about .aboutme .paragraph p {
   font-size: 1.1rem;
   line-height: 25px;
+  text-align: justify;
+}
+
+section.about .aboutme .paragraph p span {
+  opacity: 0.6;
 }
 
 section.about .skills {
@@ -313,6 +319,7 @@ section.about .skills ul li span {
 }
 
 section.projects {
+  margin-bottom: 50px;
   align-items: center;
 }
 
@@ -327,8 +334,8 @@ section.projects h1 span {
 }
 
 section.projects h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
   opacity: 0.6;
 }
 
@@ -347,15 +354,17 @@ section.projects .card1 {
 }
 
 section.projects .card1:hover {
-  transform: scale(1.1) translateX(-3px);
+  transform: scale(1) translateX(-3px);
   transition: 0.5s;
 }
 
 section.projects .card2 {
+  padding-top: 30px;
   width: 50%;
   height: 100%;
   transform: scale(0.9);
   border-radius: 3px;
+  justify-content: center;
 }
 
 section.projects .card2 p {
@@ -363,30 +372,32 @@ section.projects .card2 p {
   padding: 0px 20px;
   font-size: 18px;
   font-weight: 300;
+  opacity: 0.6;
 }
 
 section.projects .card2 h3 {
-  padding: 20px;
+  padding: 8px 20px;
   text-align: left;
-  font-size: 1.4rem;
-  opacity: 0.6;
+  font-size: 1.7rem;
+}
+
+section.projects .card2 h3 span {
+  color: #f9de04;
 }
 
 section.projects #card1 {
   height: 100%;
   width: 50%;
-  background-image: url(../css/assets/yoga.png);
   background-position: center;
   background-size: cover;
-}
-
-section.projects #card1:hover {
-  opacity: 0.6;
 }
 
 section.projects #card4 {
   height: 100%;
   width: 50%;
+  background-image: url(../css/assets/expense.png);
+  background-position: top;
+  background-size: cover;
 }
 
 section.projects #card5 {
@@ -395,6 +406,7 @@ section.projects #card5 {
 }
 
 section.contact {
+  margin: 50px 0;
   align-items: center;
   justify-content: center;
 }
@@ -508,6 +520,10 @@ button:hover {
   transition: 0.4s;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .contactMe {
   margin: 50px 0;
   background-color: transparent;
@@ -525,48 +541,36 @@ button:hover {
   justify-self: center;
 }
 
-.github {
+.github, .linkedin {
   width: 50px;
   height: 50px;
+  cursor: pointer;
+  transform: scale(0.9);
+  border: none;
+  background-color: #1a1b1b;
+}
+
+.github:hover, .linkedin:hover {
+  background-color: #1a1b1b;
+  transform: scale(1) translateY(-4px);
+  transition: 0.3s;
+}
+
+.github {
   background-image: url(../css/assets/ghyellsvg.svg);
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
-  transform: scale(0.9);
-  border: none;
-  background-color: #1a1b1b;
-}
-
-.github:hover {
-  background-color: #1a1b1b;
-  transform: scale(1) translateY(-4px);
-  transition: 0.3s;
 }
 
 .linkedin {
-  width: 50px;
-  height: 50px;
   background-image: url(../css/assets/linkin.svg);
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
-  transform: scale(0.9);
-  border: none;
-  background-color: #1a1b1b;
 }
 
-.linkedin:hover {
-  background-color: #1a1b1b;
-  transform: scale(1) translateY(-4px);
-  transition: 0.3s;
-}
-
-.live {
+.live, .ghub {
   width: 20px;
   height: 20px;
-  background-image: url(../css/assets/linkye.svg);
-  background-position: center;
-  background-repeat: no-repeat;
   cursor: pointer;
   transform: scale(0.9);
   border: none;
@@ -574,29 +578,22 @@ button:hover {
   margin: 25px 5px 10px 20px;
 }
 
-.live:hover {
+.live:hover, .ghub:hover {
   background-color: #1a1b1b;
   transform: scale(1) translateY(-4px);
   transition: 0.3s;
+}
+
+.live {
+  background-image: url(../css/assets/linkye.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ghub {
-  width: 20px;
-  height: 20px;
   background-image: url(../css/assets/gh1pt.svg);
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
-  transform: scale(0.9);
-  border: none;
-  background-color: #1a1b1b;
-  margin: 25px 0 10px 5px;
-}
-
-.ghub:hover {
-  background-color: #1a1b1b;
-  transform: scale(1) translateY(-4px);
-  transition: 0.3s;
 }
 
 footer {
@@ -640,12 +637,12 @@ footer {
   }
   section {
     height: fit-content;
-    width: 100%;
   }
   section.home {
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 20px;
   }
   section.home .box0 {
     width: 80%;
@@ -673,16 +670,15 @@ footer {
   section.home .contactMe {
     margin-top: 20px;
   }
+  section.about {
+    margin-top: 30px;
+  }
   section.about .box1 {
     width: 90%;
-    height: 80%;
-    height: fit-content;
     flex-direction: column-reverse;
-    margin-top: 0px;
   }
   section.about .aboutme {
     width: 100%;
-    height: fit-content;
     margin-left: 0;
     margin-bottom: 50px;
   }
@@ -692,9 +688,6 @@ footer {
   section.about .aboutme h2 {
     text-align: center;
   }
-  section.about .aboutme p {
-    text-align: center;
-  }
   section.about .aboutme .resume {
     margin-top: 20px;
   }
@@ -702,14 +695,14 @@ footer {
     margin-right: 0;
     transform: scale(0.6);
   }
-  section.about h1 {
-    margin-bottom: 0px;
-  }
   section.about .skills {
     height: 20%;
   }
+  section.projects {
+    margin-bottom: 30px;
+  }
   section.projects h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   section.projects .box2 {
@@ -717,14 +710,18 @@ footer {
     flex-direction: column;
     width: 95%;
     height: 380px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   section.projects .card2 {
     width: 100%;
     height: 50%;
+    padding-top: 5px;
   }
   section.projects .card2 h3 {
     padding: 8px 20px;
+  }
+  section.projects .card2 h3 span {
+    display: none;
   }
   section.projects .card1 {
     width: 100%;
@@ -748,15 +745,13 @@ footer {
   section.projects .live {
     margin-top: 10px;
   }
-  section.projects h2 {
-    font-size: 1.2rem;
-  }
   section.contact {
-    padding-top: 0;
+    margin-bottom: 30px;
   }
   section.contact h2 {
     font-size: 1.4rem;
     text-align: center;
+    margin-bottom: 40px;
   }
   section.contact p {
     width: 80%;
@@ -769,6 +764,30 @@ footer {
     margin-bottom: 30px;
   }
   section.contact .social {
-    margin: 30px 0;
+    margin: 50px 0;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1400px) {
+  section {
+    height: fit-content;
+  }
+  section.home {
+    height: 100vh;
+  }
+  section.about .box1 {
+    flex-direction: column-reverse;
+    width: 80%;
+  }
+  section.about .wrapper {
+    margin-right: 0;
+    transform: scale(0.7);
+  }
+  section.about .aboutme {
+    margin-left: 0;
+    width: 650px;
+  }
+  section.projects .box2 {
+    width: 95%;
   }
 }
