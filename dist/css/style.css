@@ -149,7 +149,7 @@ section.home h2 .cursor {
 section.home .my-picture {
   width: 300px;
   height: 300px;
-  background-image: url(../css/assets/IMG_20191002_171604_4.jpg);
+  background-image: url(../css/assets/profilepic.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 100%;
@@ -262,6 +262,7 @@ section.about .aboutme {
   height: fit-content;
   width: 550px;
   margin-left: 100px;
+  margin-bottom: 50px;
 }
 
 section.about .aboutme h1 {
@@ -403,6 +404,9 @@ section.projects #card4 {
 section.projects #card5 {
   height: 100%;
   width: 50%;
+  background-image: url(../css/assets/musicblog.png);
+  background-position: top;
+  background-size: cover;
 }
 
 section.contact {
@@ -602,7 +606,7 @@ footer {
   border-top: 1px solid #f9de04;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 750px) {
   .logo {
     transform: scale(0.8);
   }
@@ -615,7 +619,7 @@ footer {
     left: 0;
     right: 0;
     height: 92vh;
-    top: 8vh;
+    top: 70px;
     background-color: #1a1b1b;
     display: flex;
     flex-direction: column;
@@ -642,7 +646,8 @@ footer {
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
   section.home .box0 {
     width: 80%;
@@ -709,7 +714,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 95%;
-    height: 380px;
+    height: 400px;
     margin-bottom: 20px;
   }
   section.projects .card2 {
@@ -768,7 +773,11 @@ footer {
   }
 }
 
-@media (min-width: 851px) and (max-width: 1400px) {
+@media (min-width: 751px) and (max-width: 1300px) {
+  nav {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   section {
     height: fit-content;
   }
