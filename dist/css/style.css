@@ -112,7 +112,7 @@ section.home {
 
 section.home .box0 {
   width: 700px;
-  height: 500px;
+  height: fit-content;
   margin-right: 50px;
 }
 
@@ -273,6 +273,7 @@ section.about .aboutme h1 {
 section.about .aboutme h2 {
   opacity: 0.6;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 section.about .aboutme .paragraph p {
@@ -338,6 +339,7 @@ section.projects h2 {
   margin-bottom: 50px;
   font-size: 1.5rem;
   opacity: 0.6;
+  font-weight: 400;
 }
 
 section.projects .box2 {
@@ -356,11 +358,11 @@ section.projects .card1 {
 
 section.projects .card1:hover {
   transform: scale(1) translateX(-3px);
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 section.projects .card2 {
-  padding-top: 30px;
+  padding-top: 20px;
   width: 50%;
   height: 100%;
   transform: scale(0.9);
@@ -371,9 +373,13 @@ section.projects .card2 {
 section.projects .card2 p {
   color: #feffff;
   padding: 0px 20px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   opacity: 0.6;
+}
+
+section.projects .card2 p span {
+  color: #f9de04;
 }
 
 section.projects .card2 h3 {
@@ -389,7 +395,8 @@ section.projects .card2 h3 span {
 section.projects #card1 {
   height: 100%;
   width: 50%;
-  background-position: center;
+  background-image: url(../css/assets/weather.png);
+  background-position: top;
   background-size: cover;
 }
 
@@ -520,7 +527,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(249, 222, 4, 0.1);
+  background-color: rgba(249, 222, 4, 0.2);
   transition: 0.4s;
 }
 
@@ -533,16 +540,6 @@ button:focus {
   background-color: transparent;
   border: 1px solid #f9de04;
   border-radius: 3px;
-}
-
-.resume {
-  width: fit-content;
-  align-self: center;
-  margin-top: 50px;
-  background-color: transparent;
-  border: 1px solid #f9de04;
-  border-radius: 3px;
-  justify-self: center;
 }
 
 .github, .linkedin {
@@ -579,7 +576,7 @@ button:focus {
   transform: scale(0.9);
   border: none;
   background-color: #1a1b1b;
-  margin: 25px 5px 10px 20px;
+  margin-top: 15px;
 }
 
 .live:hover, .ghub:hover {
@@ -592,6 +589,7 @@ button:focus {
   background-image: url(../css/assets/linkye.svg);
   background-position: center;
   background-repeat: no-repeat;
+  margin-left: 20px;
 }
 
 .ghub {
@@ -724,9 +722,13 @@ footer {
   }
   section.projects .card2 h3 {
     padding: 8px 20px;
+    font-size: 1.5rem;
   }
   section.projects .card2 h3 span {
     display: none;
+  }
+  section.projects .card2 p {
+    font-size: 16px;
   }
   section.projects .card1 {
     width: 100%;
@@ -798,5 +800,8 @@ footer {
   }
   section.projects .box2 {
     width: 95%;
+  }
+  section.projects .card2 {
+    padding-top: 0;
   }
 }
